@@ -1,0 +1,19 @@
+/* --Variantes-- */
+:root{
+    --pink:#f63fff;
+--blue:#8400ff;
+--purple:#4d245b;
+--dark:#130418;
+}
+.my-thing{
+    background-color: var(--blue);
+    border:1px solid var(--pink);
+}
+
+/*--Main--*/
+
+
+/*--About--*/
+
+
+/*--Contact--*/
