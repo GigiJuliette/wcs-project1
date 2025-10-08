@@ -5,15 +5,75 @@
 --purple:#4d245b;
 --dark:#130418;
 }
-.my-thing{
-    background-color: var(--blue);
-    border:1px solid var(--pink);
-}
+
+/*--Navbar--*/
 
 /*--Main--*/
+main {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 10rem;
+    flex-wrap: wrap;
+    background-color: var(--dark);
+    font-family: "Zalando Sans Expanded", sans-serif;
+}
 
+section {
+ background: var(--blue);
+ text-align: center;
+ font-size: x-large;
+}
+section h2 {
+    font-size: 30px;
+}
+section h3 {
+    font-size: larger;
+}
+section p{
+    font-size: medium;
+    margin-bottom: 5rem;
+}
 
 /*--About--*/
+.about {
+    font-size: larger;
+}
 
+.social {
+    width: 3rem;
+    margin: 1rem;
+}
 
 /*--Contact--*/
+form {
+    display: flex;
+gap: 1rem;
+border: 20px;
+font-size: medium;
+}
+label {
+    font-weight: 500;
+}
+input textarea {
+    padding: 1rem;
+    border: 5px solid var(--pink);
+    font-size: 2rem;
+}
+textarea {
+    min-height: 10px;
+    max-height: 20px;
+}
+button {
+    background-color: var(--purple);
+    color: var(--pink);
+    border-color: var(--pink);
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+button :hover{
+    background: var(--dark);
+}
+
+/*--Footer--*/
