@@ -1,0 +1,68 @@
+/* classes à contruire en css */
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  background-color: #130418;
+}
+
+.header {
+  background-color: #130418;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem;
+  flex-wrap: wrap;
+}
+
+.titre {
+  /* copier css du titre pour les autres pages */
+  font-family: 'Montserrat';
+  font-size: large;
+  color: #f63fff;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.disk {
+  margin-top: 1rem;
+  background-color: #8400ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  height: 500px;
+  width: 300px;
+  padding: 1rem;
+}
+
+.disk-cover {
+  width: 250px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.disk-title {
+  justify-content: center;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  color: #4d245b;
+  background-color: #8400ff;
+  padding: 1rem;
+}
+
+.disk-description {
+  justify-content: center;
+  font-family: 'Montserrat';
+  font-size: small;
+  color: #130418;
+  background-color: #8400ff;
+  padding: 1rem;
+}
