@@ -68,7 +68,24 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* Compte à rebours visuel */
+/* Carte Google Maps */
+.map-container {
+    width: 100%;
+    margin: 1.5rem 0;
+    border: 2px solid var(--pink);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(246, 63, 255, 0.3);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+    display: block;
+}
+
+/* Compte à rebours */
 .timer {
     width: 80%;
     height: 12px;
