@@ -1,0 +1,161 @@
+/* Palette de couleurs */
+:root {
+    --pink: #f63fff;
+    --blue: #8400ff;
+    --purple: #4d245b;
+    --dark: #130418;
+    --text-light: #f5f5f5;
+}
+
+/* Style global */
+body {
+    background-color: var(--dark);
+    color: var(--text-light);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+    align-items: center;
+}
+
+/* Section principale (mise en avant - grande affiche) */
+.featured {
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+    background: linear-gradient(90deg, rgba(132, 0, 255, 0.25), rgba(246, 63, 255, 0.1));
+    border: 2px solid var(--pink);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(246, 63, 255, 0.25);
+    padding: 2.5rem;
+    transform: scale(1.03);
+}
+
+.featured img {
+    flex: 3;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    animation: fadeIn 1.5s ease-out both;
+}
+
+.featured .text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 1rem;
+}
+
+.featured h2 {
+    font-size: 2.4rem;
+    color: var(--blue);
+    margin-bottom: 1rem;
+}
+
+.featured p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #eaeaea;
+    margin-bottom: 1.5rem;
+}
+
+.featured .btn-ticket {
+    align-self: start;
+    font-size: 1.1rem;
+    padding: 0.9rem 2rem;
+}
+
+.section {
+    width: 80%;
+}
+
+.featured {
+    width: 95%;
+}
+
+
+/* Chaque section d’événement */
+.section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.section:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Image à gauche */
+.section img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Zone de texte à droite */
+.text {
+    flex: 1;
+}
+
+.text h2 {
+    color: var(--pink);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.text p {
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+/* Bouton billetterie / shop */
+.btn-ticket {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(90deg, var(--blue), var(--pink));
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-ticket:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+
+/* Animation d’apparition de la section principale */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Application de l’animation à la section en vedette */
+.featured {
+    animation: fadeInUp 1.2s ease-out both;
+}
