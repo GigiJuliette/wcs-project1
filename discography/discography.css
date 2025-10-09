@@ -18,6 +18,7 @@ body {
   padding: 3rem;
   flex-wrap: wrap;
   background: none;
+  color: #ffffff;
 }
 
 
@@ -40,13 +41,7 @@ body {
   to {
     stroke-dashoffset: 0;
   }
-}
 
-.title {
-  /* copier css du titre pour les autres pages */
-  font-size: 5rem;
-  line-height: 0.9rem;
-  padding-left: 1rem;
 
 }
 
@@ -65,9 +60,14 @@ body {
   justify-content: space-between;
   align-items: center;
   border-radius: 20px;
-  height: 500px;
+  height: 600px;
   width: 300px;
-  padding: 1rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(195, 195, 195, 0.3);
 }
 
 .disk-cover {
@@ -80,8 +80,7 @@ body {
   justify-content: center;
   font-family: 'Montserrat';
   font-weight: bold;
-  color: #4d245b;
-  background-color: #8400ff;
+  color: #ffffff;
   padding: 1rem;
 }
 
@@ -90,6 +89,17 @@ body {
   font-family: 'Montserrat';
   font-size: small;
   color: #130418;
-  background-color: #8400ff;
-  padding: 1rem;
+
+  color: #ffffff;
+}
+
+.button {
+  height: 42px;
+  width: 104px;
+  border-radius: 80px;
+  border: 3px;
+  border-color: #ffffff;
+  box-shadow: 0 0 10px 2px #ffffff77;
+  background: none;
+  color: #ffffff;
 }
