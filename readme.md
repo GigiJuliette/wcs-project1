@@ -14,8 +14,7 @@ HTML, CSS, JavaScript (vanilla).
 Pour assurer cohérence et bonne collaboration :
 
 - **Code, commits et commentaires** : en anglais.  
-- **Variables et fonctions** : camelCase.  
-- **Classes** : PascalCase.  
+- **Variables, fonctions & classes** : camelCase.
 - **Noms de fichiers & assets** : kebab-case.
 
 ### Arborescence
@@ -63,17 +62,20 @@ projet/
 @import url("contact.css");
 ```
 
-**Dans chaque page HTML, inclure uniquement le fichier CSS global :**
+**Dans chaque page HTML, inclure uniquement le fichier CSS global, dans (`<head>`) :**
 
 ```html
-<link rel="stylesheet" href="styles/style.css">
+<head>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
 ```
 
-**Pour les scripts JavaScript, inclure le fichier global, puis le fichier spécifique à la page :**
+**Pour les scripts JavaScript, inclure le fichier global, puis le fichier spécifique à la page, à la fin du fichier html:**
 
 ```html
-<script src="js/main.js"></script>
-<script src="js/about.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/about.js"></script>
+</body>
 ```
 
 ### Pourquoi cette structure est efficace
