@@ -97,6 +97,7 @@ const artists = {
 function artistUpdate() {
   const nameToUpdate = document.getElementById("artistName");
   nameToUpdate.innerHTML = artists.juliette.name;
+  const trackToUpdate = 
 }
 
 const cardJuliette = document.getElementById("card-juliette");
