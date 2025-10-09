@@ -36,16 +36,6 @@
     top: 41%;
   }
 
-  .heroCounter {
-    width: 100%;
-    display: flex;
-    align-self: end;
-    justify-content: space-evenly;
-
-    img {
-      height: 70px;
-    }
-  }
 }
 
 
@@ -67,5 +57,23 @@
     fill-opacity: 0;
     stroke-dasharray: 730;
     stroke-dashoffset: 730;
+  }
+}
+
+.heroCounter {
+
+
+  width: 100%;
+  display: flex;
+  align-self: end;
+  justify-content: space-evenly;
+
+  p {
+    color: var(--offwhite);
+    font-size: 5rem;
+  }
+
+  img {
+    height: 70px;
   }
 }
