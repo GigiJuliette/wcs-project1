@@ -12,7 +12,14 @@
 
     <!-- Navbar -->
     <nav>
-
+        <img src="assets/icons/placeholder.svg">
+        <!-- Change ".underline" class according to the page we are on. -->
+        <a class="underline" href="">Home</a>
+        <a href="">Artists</a>
+        <a href="">Discography</a>
+        <a href="">Events</a>
+        <a href="">Shop</a>
+        <a href="">About</a>
     </nav>
 
     <!-- Contenu -->
@@ -32,14 +39,15 @@
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5418.759128787418!2d-1.6305082234300214!3d47.228720971157635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ecc3914960bf%3A0x182a00d2a680f5ae!2sZ%C3%A9nith%20Nantes%20M%C3%A9tropole!5e0!3m2!1sfr!2sfr!4v1759936865021!5m2!1sfr!2sfr"></iframe>"
                 </div>
-                <div class="timer"></div>
+                <div class="timer" data-date="2025-12-31T23:59:59"></div>
+
                 <a class="btn-ticket" href="#" aria-label="Accès Shop">Shop</a>
             </div>
         </div>
         <div class="section">
             <img src="Capture d’écran 2025-10-08 à 16.18.13.png" alt="Evenement 1">
             <div class="text">
-                <h2>Concert de </h2>
+                <h2>Concert de Cécile</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique eligendi modi
                     vel
                     eveniet iste repudiandae odio, sit aspernatur quae reprehenderit. Nemo odit nostrum beatae quia,
@@ -50,7 +58,7 @@
         <div class="section">
             <img src="image.png" alt="Evenement 2">
             <div class="text">
-                <h2>Nouvel album de </h2>
+                <h2>Nouvel album de Romain</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique eligendi modi
                     vel
                     eveniet iste repudiandae odio, sit aspernatur quae reprehenderit. Nemo odit nostrum beatae quia,
@@ -63,7 +71,7 @@
         <div class="section">
             <img src="image2.png" alt="Evenement 3">
             <div class="text">
-                <h2>Tournée national de </h2>
+                <h2>Tournée national de Juliette</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam cumque magni similique
                     eligendi modi vel
                     eveniet iste repudiandae odio, sit aspernatur quae reprehenderit. Nemo odit nostrum beatae
@@ -73,6 +81,32 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const timer = document.querySelector(".timer");
+            const targetDate = new Date(timer.dataset.date).getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance <= 0) {
+                    timer.textContent = "L'événement a commencé 🎉";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                timer.textContent = `${days}j ${hours}h ${minutes}m ${seconds}s`;
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        });
+    </script>
 
 </body>
 

@@ -1,10 +1,100 @@
-/* Palette de couleurs */
 :root {
     --pink: #f63fff;
     --blue: #8400ff;
     --purple: #4d245b;
     --dark: #130418;
-    --text-light: #f5f5f5;
+    --text-light: #ffffff;
+    --font-title: "Zalando Sans Expanded", sans-serif;
+    --font-body: "Montserrat", sans-serif;
+}
+
+body {
+    background: var(--dark);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+button,
+h1,
+h2,
+h3 {
+    font-family: var(--title-font);
+}
+
+span,
+p,
+div {
+    font-family: var(--content-font)
+}
+
+/* NAV BAR */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 10rem;
+    position: relative;
+
+    img {
+        position: absolute;
+        left: 1rem;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        position: relative;
+        padding: 1.5rem 3rem;
+
+        &:after {
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 1px;
+            left: 50%;
+            position: absolute;
+            transition: 0.3s ease;
+            width: 0;
+            background: white;
+        }
+
+        &:hover:after {
+            width: 100%;
+            left: 0;
+            box-shadow: 0 0 15px 2px var(--pink-lighter);
+        }
+
+        &:active:after {
+            width: 300%;
+            left: -100%;
+            opacity: 0.8;
+            box-shadow: 0 0 5px 1px var(--pink-lighter);
+        }
+
+
+    }
+
+    .underline {
+        &:after {
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 1px;
+            left: 0;
+            position: absolute;
+            transition: 0.3s ease;
+            width: 100%;
+            background: white;
+            box-shadow: 0 0 15px 2px var(--pink-lighter);
+        }
+    }
 }
 
 /* Style global */
@@ -30,10 +120,10 @@ body {
     display: flex;
     align-items: stretch;
     gap: 2rem;
-    background: linear-gradient(90deg, rgba(132, 0, 255, 0.25), rgba(246, 63, 255, 0.1));
-    border: 2px solid var(--pink);
+    background: white;
+    border: 2px solid var(--pink-lighter);
     border-radius: 15px;
-    box-shadow: 0 0 30px rgba(246, 63, 255, 0.25);
+    box-shadow: 0 0 15px 2px var(--pink-lighter);
     padding: 2.5rem;
     transform: scale(1.03);
 }
@@ -57,7 +147,6 @@ body {
 
 .featured h2 {
     font-size: 2.4rem;
-    color: var(--blue);
     margin-bottom: 1rem;
 }
 
@@ -72,7 +161,6 @@ body {
 .map-container {
     width: 100%;
     margin: 1.5rem 0;
-    border: 2px solid var(--pink);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(246, 63, 255, 0.3);
@@ -87,25 +175,22 @@ body {
 
 /* Compte à rebours */
 .timer {
-    width: 80%;
-    height: 12px;
-    background-color: rgba(255, 255, 255, 0.15);
+    font-family: var(--font-title);
+    font-size: 1.3rem;
+    color: white;
+    text-shadow: 0 0 10px var(white);
+    border: 2px solid white;
     border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    margin: 1rem 0;
+    padding: 0.8rem 1.5rem;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px white;
+    margin-bottom: 1.5rem;
 }
 
-.timer::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, var(--blue), var(--pink));
-    animation: countdown 10s linear infinite;
-    border-radius: 10px;
-    box-shadow: 0 0 10px var(--pink);
+
 }
+
 
 @keyframes countdown {
     0% {
@@ -162,7 +247,6 @@ body {
 }
 
 .text h2 {
-    color: var(--pink);
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
@@ -177,9 +261,9 @@ body {
 .btn-ticket {
     display: inline-block;
     padding: 0.7rem 1.5rem;
-    background: linear-gradient(90deg, var(--blue), var(--pink));
     color: white;
     text-decoration: none;
+    border: 2px solid white;
     border-radius: 8px;
     font-weight: bold;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -188,6 +272,16 @@ body {
 .btn-ticket:hover {
     transform: translateY(-3px);
     opacity: 0.85;
+    box-shadow: 0 0 10px white;
+}
+
+/* Titres avec effet néon (comme "Home" dans la navbar) */
+h1,
+h2,
+h3 {
+    color: white;
+    position: relative;
+    text-shadow: 0 0 10px var(--pink), 0 0 20px var(--pink);
 }
 
 
@@ -207,4 +301,9 @@ body {
 /* Application de l’animation à la section en vedette */
 .featured {
     animation: fadeInUp 1.2s ease-out both;
+}
+
+.my-thing {
+    background-color: var(--blue);
+    border: 1px solid var(--pink);
 }
