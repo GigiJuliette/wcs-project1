@@ -1,9 +1,11 @@
+@import url(/styles/artists.css);
+
 :root {
   --pink: #f63fff;
   --pink-lighter: #f53fff83;
   --blue: #8400ff;
   --purple: #4d245b;
-  --dark: #130418;
+  --dark: #010018;
   --title-font: "Zalando Sans Expanded", sans-serif;
   --content-font: "Montserrat", sans-serif;
 }

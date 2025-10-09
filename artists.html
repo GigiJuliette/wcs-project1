@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/artists.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +15,7 @@
   </head>
 
   <body class="magicpattern">
-    <svg
+    <!-- <svg
       id="backgroundTopo"
       xmlns="http://www.w3.org/2000/svg"
       width="1920"
@@ -1356,25 +1356,35 @@
       3.76-1.55 17.3-6.6 20-7.72 9.5-3.97 13.14-7.2
       11.73-11.44-.9-2.71-2.25-3.8-4.3-3.79-1.6 0-2.15.17-7.36 2.05-8.17
       2.94-13.34 3.14-19.16-1.01z'></path>
-    </svg>
+    </svg> -->
+    <nav>
+    <img src="assets/icons/placeholder.svg">
+    <!-- Change ".underline" class according to the page we are on. -->
+    <a href="">Home</a>
+    <a class="underline" href="">Artists</a>
+    <a href="">Discography</a>
+    <a href="">Events</a>
+    <a href="">Shop</a>
+    <a href="">About</a>
+  </nav>
     <div class="container">
       <div class="boxLeft">
-        <h1 id="artistName">SNOOP <br />DOG</h1>
+        <h1 id="artistName">THOMAS</h1>
         <div class="highlightedTracks">
           <div>
-            <h2>YOUNG, WILD & FREE</h2>
-            <h3>Mac and Devin <br />Go to High School</h3>
-            <p>2011</p>
+            <h2 id="track1">YOUNG, WILD & FREE</h2>
+            <h3 id="album1">Mac and Devin <br />Go to High School</h3>
+            <p id="release1">2011</p>
           </div>
           <div>
-            <h2>BLACK AND YELLOW</h2>
-            <h3>ROLLING PAPERS</h3>
-            <p>2011</p>
+            <h2 id="track2">BLACK AND YELLOW</h2>
+            <h3 id="album2">ROLLING PAPERS</h3>
+            <p id="release2">2011</p>
           </div>
           <div>
-            <h2>STILL D.R.E</h2>
-            <h3>'2001'</h3>
-            <p>1999</p>
+            <h2 id="track3">STILL D.R.E</h2>
+            <h3 id="album3">'2001'</h3>
+            <p id="release3">1999</p>
           </div>
           <div><button class="btnTrack">All Tracks</button></div>
         </div>
@@ -1384,31 +1394,32 @@
           src="/assets/images/portraitThomas.png"
           alt="Artiste"
           class="artistPicture"
+          id="profileimg"
         />
       </div>
     </div>
 
     <div class="container-card">
-      <div class="card">
-        <img src="/assets/images/card_juliette.png" alt="" id="card-juliette" />
+      <div class="card" id="card-juliette">
+        <img src="/assets/images/card_juliette.png" alt="" />
       </div>
       <div class="card" id="card-thomas">
         <img src="/assets/images/card_thomas.png" alt="" />
       </div>
-      <div class="card">
-        <img src="/assets/images/card_juliette.png" alt="" />
+      <div class="card" id="card-teddy">
+        <img src="/assets/images/card_teddy.png" alt="" />
       </div>
-      <div class="card">
-        <img src="/assets/images/card_juliette.png" alt="" />
+      <div class="card" id="card-maxime">
+        <img src="/assets/images/card_maxime.png" alt="" />
       </div>
-      <div class="card">
-        <img src="/assets/images/card_juliette.png" alt="" />
+      <div class="card" id="card-cecile">
+        <img src="/assets/images/card_cecile.png" alt="" />
       </div>
-      <div class="card">
-        <img src="/assets/images/card_juliette.png" alt="" />
+      <div class="card" id="card-joel">
+        <img src="/assets/images/card_joel.png" alt="" />
       </div>
-      <div class="card">
-        <img src="/assets/images/card_juliette.png" alt="" />
+      <div class="card" id="card-romain">
+        <img src="/assets/images/card_romain.png" alt="" />
       </div>
     </div>
   </body>
