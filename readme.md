@@ -21,26 +21,26 @@ Pour assurer cohérence et bonne collaboration :
 ### Arborescence
 
 projet/
-│
 ├── index.html
 ├── about.html
 ├── contact.html
 │
 ├── styles/
-│ ├── style.css # Styles généraux (layout, header, footer, couleurs globales)
-│ ├── index.css # Styles spécifiques à la page d’accueil
-│ ├── about.css # Styles spécifiques à la page “À propos”
-│ └── contact.css # Styles spécifiques à la page “Contact”
+│   ├── style.css        # Styles généraux (layout, header, footer, couleurs globales)
+│   ├── index.css        # Styles spécifiques à la page d’accueil
+│   ├── about.css        # Styles spécifiques à la page “À propos”
+│   └── contact.css      # Styles spécifiques à la page “Contact”
 │
 ├── js/
-│ ├── main.js # Script global
-│ ├── index.js # Script pour la page d’accueil
-│ ├── about.js # Script pour la page “À propos”
-│ └── contact.js # Script pour la page “Contact”
+│   ├── main.js          # Script global
+│   ├── index.js         # Script pour la page d’accueil
+│   ├── about.js         # Script pour la page “À propos”
+│   └── contact.js       # Script pour la page “Contact”
 │
 └── assets/
-  ├── images/ # Toutes les images du site
-  └── icons/ # Icônes SVG ou PNG
+    ├── images/          # Toutes les images du site
+    └── icons/           # Icônes SVG ou PNG
+
 
 ### Bonnes pratiques à suivre
 
