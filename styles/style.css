@@ -1,9 +1,12 @@
+@import url('main-page.css');
+
 :root {
   --pink: #f63fff;
   --pink-lighter: #f53fff83;
   --blue: #8400ff;
   --purple: #4d245b;
-  --dark: #130418;
+  --dark: #010018;
+  --offwhite: #dcd7df;
   --title-font: "Zalando Sans Expanded", sans-serif;
   --content-font: "Montserrat", sans-serif;
 }
@@ -15,6 +18,7 @@ body {
 * {
   margin: 0;
   padding: 0;
+  color: var(--offwhite);
 }
 
 a,
@@ -47,7 +51,7 @@ nav {
   }
 
   a {
-    color: white;
+    color: var(--offwhite);
     text-decoration: none;
     cursor: pointer;
     position: relative;
@@ -62,7 +66,7 @@ nav {
       position: absolute;
       transition: 0.3s ease;
       width: 0;
-      background: white;
+      background: var(--offwhite);
     }
 
     &:hover:after {
@@ -91,7 +95,7 @@ nav {
       position: absolute;
       transition: 0.3s ease;
       width: 100%;
-      background: white;
+      background: var(--offwhite);
       box-shadow: 0 0 15px 2px var(--pink-lighter);
     }
   }
