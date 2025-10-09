@@ -1,0 +1,98 @@
+:root {
+  --pink: #f63fff;
+  --pink-lighter: #f53fff83;
+  --blue: #8400ff;
+  --purple: #4d245b;
+  --dark: #130418;
+  --title-font: "Zalando Sans Expanded", sans-serif;
+  --content-font: "Montserrat", sans-serif;
+}
+
+body {
+  background: var(--dark);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button,
+h1,
+h2,
+h3 {
+  font-family: var(--title-font);
+}
+
+span,
+p,
+div {
+  font-family: var(--content-font)
+}
+
+/* NAV BAR */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 10rem;
+  position: relative;
+
+  img {
+    position: absolute;
+    left: 1rem;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    padding: 1.5rem 3rem;
+
+    &:after {
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      transition: 0.3s ease;
+      width: 0;
+      background: white;
+    }
+
+    &:hover:after {
+      width: 100%;
+      left: 0;
+      box-shadow: 0 0 15px 2px var(--pink-lighter);
+    }
+
+    &:active:after {
+      width: 300%;
+      left: -100%;
+      opacity: 0.8;
+      box-shadow: 0 0 5px 1px var(--pink-lighter);
+    }
+
+
+  }
+
+  .underline {
+    &:after {
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      transition: 0.3s ease;
+      width: 100%;
+      background: white;
+      box-shadow: 0 0 15px 2px var(--pink-lighter);
+    }
+  }
+}
