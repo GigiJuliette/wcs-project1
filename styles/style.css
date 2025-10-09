@@ -38,17 +38,16 @@ div {
 /* NAV BAR */
 
 nav {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
   align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 10rem;
+  justify-items: center;
+  padding: 1.5rem;
   position: relative;
-
-  img {
-    position: absolute;
-    left: 1rem;
-  }
+  overflow-x: hidden;
 
   a {
     color: var(--offwhite);
@@ -72,14 +71,15 @@ nav {
     &:hover:after {
       width: 100%;
       left: 0;
-      box-shadow: 0 0 15px 2px var(--pink-lighter);
+      box-shadow: 0 0 5px 1px var(--pink-lighter);
     }
 
     &:active:after {
-      width: 300%;
-      left: -100%;
-      opacity: 0.8;
+      width: 5000%;
+      left: -2500%;
+      opacity: 0;
       box-shadow: 0 0 5px 1px var(--pink-lighter);
+      transition: 1s ease;
     }
 
 
@@ -96,7 +96,20 @@ nav {
       transition: 0.3s ease;
       width: 100%;
       background: var(--offwhite);
-      box-shadow: 0 0 15px 2px var(--pink-lighter);
+      box-shadow: 0 0 5px 1px var(--pink-lighter);
     }
+  }
+
+  svg {
+    height: 2.5rem;
+    stroke: var(--offwhite);
+  }
+}
+
+@keyframes activeNav {
+  to {
+    width: 1000%;
+    left: -500%;
+    opacity: 0;
   }
 }
