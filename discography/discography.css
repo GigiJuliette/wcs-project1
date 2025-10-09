@@ -1,26 +1,53 @@
 /* classes à contruire en css */
 * {
-  margin: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat';
+  font-family: "Zalando Sans Expanded", sans-serif;
+
+}
+
+body {
   background-color: #130418;
 }
 
 .header {
-  background-color: #130418;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: left;
   padding: 3rem;
   flex-wrap: wrap;
+  background: none;
 }
 
-.titre {
+
+#backgroundTopo {
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  fill: rgba(254, 2, 198, 0.1);
+  stroke: rgba(254, 2, 198, 0.2);
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 4000;
+  animation: draw 6s ease-in-out infinite alternate;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.title {
   /* copier css du titre pour les autres pages */
-  font-family: 'Montserrat';
-  font-size: large;
-  color: #f63fff;
-  justify-content: center;
+  font-size: 5rem;
+  line-height: 0.9rem;
+  padding-left: 1rem;
+
 }
 
 .card-container {
@@ -32,7 +59,7 @@
 
 .disk {
   margin-top: 1rem;
-  background-color: #8400ff;
+  background-color: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
