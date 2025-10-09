@@ -19,7 +19,7 @@ Pour assurer cohérence et bonne collaboration :
 - **Noms de fichiers & assets** : kebab-case.
 
 ### Arborescence
-
+```
 projet/
 ├── index.html
 ├── about.html
@@ -40,7 +40,7 @@ projet/
 └── assets/
     ├── images/          # Toutes les images du site
     └── icons/           # Icônes SVG ou PNG
-
+```
 
 ### Bonnes pratiques à suivre
 
