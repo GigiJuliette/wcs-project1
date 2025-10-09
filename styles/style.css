@@ -42,6 +42,7 @@ nav {
   justify-content: space-between;
   padding: 1.5rem 10rem;
   position: relative;
+  float: top;
 
   img {
     position: absolute;
