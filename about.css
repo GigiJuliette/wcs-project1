@@ -45,7 +45,7 @@ main {
     color: white;
 }
 
-section {
+.sectionabout{
     background-color:#130418;
     text-align: center;
     font-size: x-large;
@@ -60,15 +60,15 @@ section {
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(195, 195, 195, 0.3);
 }
-section h2 {
+.sectionabout h2 {
     font-size:45px;
     margin: 50px;
     text-shadow: 0 0 60px var(--pink);
 }
-section h3 {
+.sectionabout h3 {
     font-size: larger;
 }
-section p{
+.sectionabout p{
     font-size: medium;
     margin-bottom: 5rem;
 }
