@@ -186,7 +186,14 @@ body {
     margin: 1.5rem 0;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(246, 63, 255, 0.3);
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 10px 2px #ffffff77;
+    transition: all 0.3s ease-in-out;
+}
+
+.map-container:hover {
+    box-shadow: 0 0 10px 4px #f63fff;
+    border-color: #f63fff;
 }
 
 .map-container iframe {
@@ -194,6 +201,12 @@ body {
     height: 250px;
     border: none;
     display: block;
+    filter: grayscale(100%) brightness(85%) contrast(110%);
+    transition: filter 0.3s ease;
+}
+
+.map-container:hover iframe {
+    filter: grayscale(0%) brightness(100%) contrast(120%) saturate(130%);
 }
 
 /* Compte à rebours */
@@ -204,8 +217,8 @@ body {
     gap: 0.8rem;
     margin-bottom: 2rem;
     padding: 1rem 2rem;
-    border-radius: 40px;
-    border: 3px solid #ffffff;
+    border-radius: 6px;
+    border: 3px;
     background: none;
     color: #ffffff;
     box-shadow: 0 0 10px 2px #ffffff77;
@@ -222,6 +235,19 @@ body {
     border-color: #f63fff;
     color: #f63fff;
 }
+
+.timer span {
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+    transition: color 0.2s ease;
+}
+
+/* Classe activée à chaque seconde */
+.timer .digit-flash {
+    animation: digitGlow 0.4s ease;
+}
+
 
 
 .flip-unit {
