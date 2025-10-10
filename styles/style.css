@@ -1,53 +1,47 @@
+@import url('main-page.css');
+
 :root {
   --pink: #f63fff;
   --pink-lighter: #f53fff83;
   --blue: #8400ff;
   --purple: #4d245b;
-  --dark: #130418;
+  --dark: #010018;
+  --offwhite: #dcd7df;
   --title-font: "Zalando Sans Expanded", sans-serif;
   --content-font: "Montserrat", sans-serif;
 }
 
 body {
   background: var(--dark);
+  overflow-x: hidden;
 }
 
 * {
   margin: 0;
   padding: 0;
-}
-
-a,
-button,
-h1,
-h2,
-h3 {
+  color: var(--offwhite);
   font-family: var(--title-font);
 }
 
-span,
-p,
-div {
-  font-family: var(--content-font)
+a {
+  text-decoration: none;
 }
+
+
 
 /* NAV BAR */
 
 nav {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
   align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 10rem;
+  justify-items: center;
+  padding: 1.5rem;
   position: relative;
-
-  img {
-    position: absolute;
-    left: 1rem;
-  }
+  overflow-x: hidden;
 
   a {
-    color: white;
+    color: var(--offwhite);
     text-decoration: none;
     cursor: pointer;
     position: relative;
@@ -62,22 +56,22 @@ nav {
       position: absolute;
       transition: 0.3s ease;
       width: 0;
-      background: white;
+      background: var(--offwhite);
     }
 
     &:hover:after {
       width: 100%;
       left: 0;
-      box-shadow: 0 0 15px 2px var(--pink-lighter);
-    }
-
-    &:active:after {
-      width: 300%;
-      left: -100%;
-      opacity: 0.8;
       box-shadow: 0 0 5px 1px var(--pink-lighter);
     }
 
+    &:active:after {
+      width: 5000%;
+      left: -2500%;
+      opacity: 0;
+      box-shadow: 0 0 5px 1px var(--pink-lighter);
+      transition: 1s ease;
+    }
 
   }
 
@@ -91,8 +85,120 @@ nav {
       position: absolute;
       transition: 0.3s ease;
       width: 100%;
-      background: white;
-      box-shadow: 0 0 15px 2px var(--pink-lighter);
+      background: var(--offwhite);
+      box-shadow: 0 0 5px 1px var(--pink-lighter);
+      animation: activeNav reverse 1s;
     }
+  }
+
+}
+
+.cart {
+  height: 3rem;
+  stroke: var(--offwhite);
+  filter: url(#shadow);
+}
+
+@keyframes activeNav {
+  to {
+    width: 1000%;
+    left: -500%;
+    opacity: 0;
+  }
+}
+
+@media(max-width:1300px) {
+  nav a {
+    padding: 1.5rem 1rem;
+  }
+}
+
+
+
+.ham {
+  cursor: pointer;
+  transition: 400ms ease-out;
+}
+
+/* Burger Menu  */
+
+@media(max-width:800px) {
+  nav {
+    display: none;
+  }
+}
+
+@media(min-width:800px) {
+  .burgerNav {
+    display: none;
+  }
+}
+
+.burgerNav {
+  height: 7rem;
+  margin: 1rem;
+
+  .burgerMenu {
+    width: 100%;
+    height: calc(100% - 8rem);
+    position: absolute;
+    z-index: 2;
+    right: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 24px;
+    backdrop-filter: blur(20px);
+    transition: .3s ease;
+  }
+
+  .openBurger {
+    width: 100%;
+    right: 0;
+    transition: .3s ease;
+  }
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: var(--offwhite);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  filter: url(#shadow)
+}
+
+
+.ham {
+  .top {
+    stroke-dasharray: 40 172;
+  }
+
+  .middle {
+    stroke-dasharray: 40 111;
+  }
+
+  .bottom {
+    stroke-dasharray: 40 172;
+  }
+}
+
+.open {
+  .top {
+    stroke-dashoffset: -132px;
+
+
+  }
+
+  .middle {
+    stroke-dashoffset: -71px;
+
+  }
+
+  .bottom {
+    stroke-dashoffset: -132px;
   }
 }
