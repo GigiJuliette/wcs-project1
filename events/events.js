@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
         updateFlip(units.minutes, minutes);
         updateFlip(units.seconds, seconds);
 
-        // 🌸 Effet néon rose à chaque seconde
         timer.classList.add("timer-flash");
         setTimeout(() => {
             timer.classList.remove("timer-flash");
