@@ -6,12 +6,12 @@ const startAnimations = () => {
     const max = +element.dataset.max;
     const min = +element.dataset.min;
     const duration = +element.dataset.duration;
-
+    const unit = element.dataset.unit;
     let counter = min;
 
     const interval = setInterval(() => {
       counter++;
-      element.textContent = counter;
+      element.textContent = counter + unit;
       if (counter === max) {
         clearInterval(interval);
       }
