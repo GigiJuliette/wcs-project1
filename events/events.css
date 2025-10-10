@@ -229,7 +229,6 @@ body {
     transition: all 0.25s ease-in-out;
 }
 
-/* Quand le timer “pulse” en rose */
 .timer-flash {
     box-shadow: 0 0 15px 5px #f63fff;
     border-color: #f63fff;
@@ -243,7 +242,6 @@ body {
     transition: color 0.2s ease;
 }
 
-/* Classe activée à chaque seconde */
 .timer .digit-flash {
     animation: digitGlow 0.4s ease;
 }
@@ -323,7 +321,24 @@ body {
 
 /* Zone de texte à droite */
 .text {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* <-- empêche le bouton de s’étirer */
+}
+
+.text .button {
+    display: inline-block;
+    width: auto;
+    border: 3px;
+    padding: 0.7rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 80px;
+    background: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px 2px #ffffff77;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .text h2 {
@@ -338,8 +353,10 @@ body {
 }
 
 /* Bouton billetterie / shop */
-.btn-ticket {
+.button {
+    all: unset;
     display: inline-block;
+    width: auto;
     padding: 0.7rem 1.5rem;
     color: white;
     text-decoration: none;
@@ -352,13 +369,13 @@ body {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.btn-ticket:hover {
+.button:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 10px 4px #f63fff;
     color: #f63fff
 }
 
-/* Titres avec effet néon (comme "Home" dans la navbar) */
+/* Titres avec effet néon */
 h1,
 h2,
 h3 {
