@@ -11,15 +11,16 @@ body {
   background-color: #130418;
 }
 
-.header {
+/* .header {
   display: flex;
   justify-content: space-around;
   align-items: left;
-  padding: 3rem;
+  
   flex-wrap: wrap;
   background: none;
-  color: #ffffff;
-}
+ 
+} */
+
 
 
 #backgroundTopo {
