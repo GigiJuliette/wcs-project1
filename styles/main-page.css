@@ -1,0 +1,79 @@
+.hero {
+  box-shadow: inset 200px 0px 100px var(--dark),
+    inset -200px 0px 100px var(--dark),
+    inset 0 30px 50px var(--dark),
+    inset 0 -30px 50px var(--dark);
+  background-image: url('../assets/images/hero.png');
+  height: 80vh;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  svg {
+    position: absolute;
+    transform-origin: center;
+    stroke: var(--offwhite);
+    stroke-width: 1px;
+    fill-opacity: 0;
+    fill: var(--offwhite);
+    stroke-dasharray: 730;
+    stroke-dashoffset: 730;
+    animation: draw 10s ease-in-out both infinite;
+    filter: url(#shadow);
+  }
+
+  #heroNeon {
+    transform: scale(1.5);
+    left: 10%;
+    top: 41%;
+
+  }
+
+  #hero808 {
+    transform: scale(1.5);
+    right: 10%;
+    top: 41%;
+  }
+
+}
+
+
+
+@keyframes draw {
+  30% {
+    fill-opacity: 1;
+    stroke-width: .1px;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    fill-opacity: 1;
+    stroke-width: .1px;
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    fill-opacity: 0;
+    stroke-dasharray: 730;
+    stroke-dashoffset: 730;
+  }
+}
+
+.heroCounter {
+
+
+  width: 100%;
+  display: flex;
+  align-self: end;
+  justify-content: space-evenly;
+
+  p {
+    color: var(--offwhite);
+    font-size: 5rem;
+  }
+
+  img {
+    height: 70px;
+  }
+}

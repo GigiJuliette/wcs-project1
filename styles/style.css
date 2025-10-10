@@ -1,6 +1,115 @@
+@import url('main-page.css');
+
 :root {
   --pink: #f63fff;
+  --pink-lighter: #f53fff83;
   --blue: #8400ff;
   --purple: #4d245b;
-  --dark: #130418;
+  --dark: #010018;
+  --offwhite: #dcd7df;
+  --title-font: "Zalando Sans Expanded", sans-serif;
+  --content-font: "Montserrat", sans-serif;
+}
+
+body {
+  background: var(--dark);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--offwhite);
+}
+
+a,
+button,
+h1,
+h2,
+h3 {
+  font-family: var(--title-font);
+}
+
+span,
+p,
+div {
+  font-family: var(--content-font)
+}
+
+/* NAV BAR */
+
+nav {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  align-items: center;
+  justify-items: center;
+  padding: 1.5rem;
+  position: relative;
+  overflow-x: hidden;
+
+  a {
+    color: var(--offwhite);
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    padding: 1.5rem 3rem;
+
+    &:after {
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      transition: 0.3s ease;
+      width: 0;
+      background: var(--offwhite);
+    }
+
+    &:hover:after {
+      width: 100%;
+      left: 0;
+      box-shadow: 0 0 5px 1px var(--pink-lighter);
+    }
+
+    &:active:after {
+      width: 5000%;
+      left: -2500%;
+      opacity: 0;
+      box-shadow: 0 0 5px 1px var(--pink-lighter);
+      transition: 1s ease;
+    }
+
+
+  }
+
+  .underline {
+    &:after {
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      transition: 0.3s ease;
+      width: 100%;
+      background: var(--offwhite);
+      box-shadow: 0 0 5px 1px var(--pink-lighter);
+    }
+  }
+
+  svg {
+    height: 2.5rem;
+    stroke: var(--offwhite);
+  }
+}
+
+@keyframes activeNav {
+  to {
+    width: 1000%;
+    left: -500%;
+    opacity: 0;
+  }
 }
