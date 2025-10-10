@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #130418;
+}
+
+/* ===== NAVBAR ===== */
+.Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.NavContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 78%;
+    padding: 15px 20px;
+}
+
+.Logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.NavLinks {
+    display: flex;
+    gap: 150px;
+}
+
+.NavLinks a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.795);
+    font-weight: 500;
+}
+
+/* ===== SHOP ===== */
+.Shop {
+    margin-top: 100px;
+    padding: 40px 20px;
+}
+
+.Products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+
+.Products2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.Products3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
+.ProductsCard {
+    background: rgba(255, 255, 255, 0.795);
+    box-shadow: 0 2px 10px #f63fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.ProductsCard:hover {
+    transform: scale(1.02);
+}
+
+.ProductsCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.Description {
+    margin: 15px 0;
+    font-size: 1rem;
+}
+
+.Buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.Buttons button {
+    padding: 8px 12px;
+    border: 1px solid #130418;
+    background: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.Buttons button:hover {
+    background: #4d245b;
+    color: #ffffff;
+}
+
+.AddBtn {
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
