@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
 
-    <link href="styles/about.css" rel="stylesheet"/>
+    <link href="about.css" rel="stylesheet"/>
     <title>About</title>
   </head>
 
@@ -1362,12 +1362,12 @@
     <div class="navDesktop">
     <img src="./assets/icons/logo.png">
     <!-- Change ".underline" class according to the page we are on. -->
-    <a class="underline" href="index.html">Home</a>
+    <a href="index.html">Home</a>
     <a href="artists.html">Artists</a>
     <a href="discography.html">Discography</a>
     <a href="events.html">Events</a>
     <a href="shop.html">Shop</a>
-    <a href="about.html">About</a>
+    <a class="underline" href="about.html">About</a>
     <svg class="cart" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
       <g fill="none" stroke-width="1">
         <path
@@ -1401,7 +1401,6 @@
         </g>
       </svg>
     </div>
-
   </nav>
     <main>
       <section class="sectionabout about">
@@ -1445,41 +1444,22 @@
         <p>with this form or by e-mail at: neon808@neon808.com</p>
         <form id="contactForm">
           <label for="name"> Name </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            required
+          <input type="text" id="name" name="name" placeholder="Name" required
           />
           <label for="surname"> Surname </label>
-          <input
-            type="text"
-            id="surname"
-            name="surname"
-            placeholder="Surname"
-            required
+          <input type="text" id="surname" name="surname" placeholder="Surname" required
           />
           <label for="email"> E-mail </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Your e-mail"
-            required
+          <input type="email" id="email" name="email" placeholder="Your e-mail" required
           />
           <label for="message"> Your message </label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Your message..."
-            required
+          <textarea id="message" name="message" placeholder="Your message..." required
           ></textarea>
-          <button class="btnTrack" href="#" id="submitBtn">
-            <!-- <span></span>
+          <a href="#" id="submitBtn">
             <span></span>
             <span></span>
-            <span></span> -->
+            <span></span>
+            <span></span>
             Send
           </button>
         </form>
