@@ -66,7 +66,7 @@ projet/
 
 ```html
 <head>
-  <link rel="stylesheet" href="./stylestyle.css">
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
 ```
 
