@@ -1,5 +1,9 @@
 const selector = ".goCrazy";
 
+if (!window.location.hash) {
+  window.location.replace(window.location.href + '#heroSnap');
+}
+
 const startAnimations = () => {
   const elements = document.querySelectorAll(selector);
   elements.forEach((element) => {
@@ -39,7 +43,7 @@ const scrollObs = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("newsAnim");
-    }     else {
+    } else {
       entry.target.classList.remove("newsAnim");
     }
   });

@@ -142,9 +142,9 @@ function animateTitle(el) {
 
     if (el.tagName == "H1") {
       const span1 = document.createElement("span");
-      span1.ariaHidden = true ;
+      span1.ariaHidden = true;
       const span2 = document.createElement("span");
-      span2.ariaHidden = true ;
+      span2.ariaHidden = true;
       span1.innerText = el.innerText;
       span2.innerText = el.innerText;
       el.appendChild(span1);

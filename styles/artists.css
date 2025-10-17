@@ -96,7 +96,8 @@ p {
   justify-content: center;
   /* transform: translateY(-500px); */
   position: absolute;
-  bottom: -25%;
+  bottom: -23%;
+  width: 100%;
 }
 
 #backgroundTopo {
